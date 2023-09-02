@@ -57,11 +57,12 @@ const Recipes = () => {
         {
             recipes?.length > 0 ? (
                 <>
-                    <div className='w-full flex flex-wrap gap-10 px-0 lg:px-10 py-10'>
-                        {recipes?.map((item, index) => (
-                            <RecipeCard recipes = {recipes} key ={index} />
-                        ))}
-                    </div>
+                    <div className='w-full  flex flex-wrap gap-10 px-0 lg:px-10 py-10'>
+                            {
+                                recipes?.map((item, index) => (
+                                    <RecipeCard recipe={item} key={index} />))
+                            }
+                        </div>
                 </>
             ) : 
             <div className='text-white w-full items-center justify-center py-10'>

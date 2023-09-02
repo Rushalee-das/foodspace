@@ -16,6 +16,15 @@ const Recipes = () => {
         setQuery(e.target.value)
     }
 
+    const handleSearchRecipe = (e) => {
+        e.preventDefault()
+        fetchRecipe()
+    }
+    const showMore = () => {
+        setLimit(prev => prev +10)
+        fetchRecipe()
+    }
+
     const fetchRecipe = async() => {
         try{
             const data = await fetchRecipes({query, limit})
@@ -44,7 +53,7 @@ const Recipes = () => {
   return (
     <div className='w-full'>
         <div className='w-full flex items-center justify-center pt-10 pb-5 px-0 md:px-10'>
-            <form className='w-full lg:w-2/4'>
+            <form className='w-full lg:w-2/4' onSubmit={handleSearchRecipe}>
                 <Searchbar placeholder='cake, chicken' handleInputChange={handleChange} 
                 rightIcon = {
                     <BiSearchAlt2 
@@ -62,7 +71,13 @@ const Recipes = () => {
                                 recipes?.map((item, index) => (
                                     <RecipeCard recipe={item} key={index} />))
                             }
-                        </div>
+                    </div>
+                    
+                    <div className='flex w-full items-center justify-center py-10'>
+                        <button className='bg-green-800 text-white px-3 py-1 rounded-full text-sm' onClick={showMore}>
+                            Show more
+                        </button>
+                    </div>
                 </>
             ) : 
             <div className='text-white w-full items-center justify-center py-10'>

@@ -24,7 +24,6 @@ const RecipeCard = ({recipe}) => {
             <span className='px-2 py-1 text-[10px] capitalize bg-[#0c452243] shadow-xl rounded-full text-green-500'>
               {mealType}
             </span>
-
           </div>
         </div>
     </div>

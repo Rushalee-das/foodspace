@@ -43,8 +43,8 @@ body {
 }
 
 .dot {
-  height: 12px;
-  width: 12px;
+  height: 10px;
+  width: 10px;
   margin-right: 10px;
   border-radius: 10px;
   background-color: #fff;
@@ -71,7 +71,7 @@ body {
   0% {
     transform: scale(0.8);
     background-color: #b3d4fc;
-    box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+    box-shadow: 0 0 0 0 rgba(178, 252, 232, 0.7);
   }
 
   50% {

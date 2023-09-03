@@ -6,15 +6,15 @@ const Footer = () => {
         <footer className="text-white py-20 bg_gradient ">
             <div className="container mx-auto px-20 lg:px-20 py-20 flex flex-col gap-10 md:flex-row justify-between border-t border-slate-800">
                 <div className="flex">
-                    <p className="font-bold text-center">
+                    <p className="font-bold text-center mx-auto">
                         Flavor<span className="text-green-500 text-xl">Verse</span>
                     </p>
                 </div>
 
-                <div className="">
+                <div className="mx-auto text-center">
                     <p>QUICK LINKS</p>
 
-                    <div className="flex flex-col text-start mb-4 md:mb-0">
+                    <div className="flex flex-col lg:text-start mb-4 md:mb-0 mx-auto md:text-center">
                         <a
                             href='#'
                             className='block md:inline-block py-2 hover:text-gray-500'
@@ -48,9 +48,9 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div>
-                    <p>LEGAL</p>
-                    <div className='flex flex-col text-start mb-4 md:mb-0 text-[14px]'>
+                <div className="mx-auto text-center">
+                    <p className="lg:text-start md:text-center">LEGAL</p>
+                    <div className='flex flex-col lg:text-start md:text-center mb-4 md:mb-0 text-[14px] mx-auto'>
                         <a
                             href='#'
                             className='block md:inline-block py-2 hover:text-gray-500'
@@ -84,8 +84,8 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col">
-                    <p>SOCIAL MEDIA</p>
+                <div className="flex flex-col mx-auto text-center">
+                    <p className="lg:text-start md:text-center">SOCIAL MEDIA</p>
                     <div className="flex mt-4 gap-3">
                         <a
                             href='#'
@@ -117,7 +117,7 @@ const Footer = () => {
                     <Button
                         title='Sign up'
                         btnType='button'
-                        containerStyle='mt-10 md:block bg-transparent border border-white text-white hover:bg-white hover:text-black rounded-md min-w-[130px]'
+                        containerStyle='mt-10 md:block bg-transparent border border-white text-white hover:bg-white hover:text-black rounded-md min-w-[130px] mx-auto'
                     />
                 </div>
             </div>

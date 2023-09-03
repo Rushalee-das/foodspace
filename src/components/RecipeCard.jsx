@@ -8,7 +8,7 @@ const RecipeCard = ({recipe}) => {
   console.log(id)
 
   return (
-    <Link to = {`/recipes/${id}`} className='w-full md:w-[150px]  '>
+    <Link to = {`/recipes/${id}`} className='w-full md:w-[150px] mx-auto'>
       <div className='bg-_gradient shadow w-full rounded-lg  mx-auto text-center'>
         <img src={image} alt={label} className='rounded-lg h-[200px] md:h-[150px] mx-auto  '/>
         <div className='p-3' >

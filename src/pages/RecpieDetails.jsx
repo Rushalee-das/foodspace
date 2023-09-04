@@ -36,6 +36,15 @@ const RecpieDetails = () => {
     getRecipe(id)
   },[id])
 
+  useEffect(() => {
+    if (!loading) {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth', // You can change this to 'auto' for instant scrolling
+      });
+    }
+  }, [loading]);
+  
   if(loading)
   {
     return(
@@ -82,7 +91,7 @@ const RecpieDetails = () => {
                 recipe?.ingredientLines?.map((ingredient, index) => {
                   return (
                     <p key = {index} className='text-white flex gap-2'>
-                      <AiFillPushpin className='text-green-800 text-xl' />
+                      <AiFillPushpin className='text-green-700 text-xl' />
                       {ingredient}</p>
                   )
                 })
@@ -90,7 +99,7 @@ const RecpieDetails = () => {
             </div>
 
             <div className='flex flex-col gap-3 mt-20'>
-              <p className='text-green-800 text-2xl'>Health Labels</p>
+              <p className='text-green-500 text-2xl'>Health Labels</p>
               <div className='flex flex-wrap gap-4'>
                 {
                   recipe?.healthLabels.map((item, index) => (
